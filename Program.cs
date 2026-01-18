@@ -3,6 +3,7 @@
 using System.Text;
 using Algoritmos.Arrays;
 using Algoritmos.Lista;
+using AlogritmoCSharp.Algoritmos.ListaEncadeada;
 
 class Program
 {
@@ -11,7 +12,8 @@ class Program
         Console.Clear();
         // EstudoArrays();
         // EstudoListas();
-        EstudoString();
+        // EstudoString();
+        EstudosListaEncadeada();
     }
 
     static void EstudoArrays()
@@ -140,5 +142,22 @@ class Program
         Console.WriteLine(sbTexto);
     }
 
+    static void EstudosListaEncadeada()
+    {
+        var listaEncadeada = new ListaEncadeada<int>();
+        listaEncadeada.Adicionar(10);
+        listaEncadeada.Adicionar(20);
+        listaEncadeada.Adicionar(30);
 
+        foreach (var item in listaEncadeada)
+        {
+            Console.WriteLine(item);
+        }
+
+        bool encontrado = listaEncadeada.Buscar(20);
+        Console.WriteLine($"20 encontrado: {encontrado}");
+
+        encontrado = listaEncadeada.Buscar(40);
+        Console.WriteLine($"40 encontrado: {encontrado}");
+    }
 }
