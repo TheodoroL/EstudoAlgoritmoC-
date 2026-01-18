@@ -2,6 +2,7 @@
 
 using System.Text;
 using Algoritmos.Arrays;
+using Algoritmos.BuscaBinaria;
 using Algoritmos.Lista;
 using AlogritmoCSharp.Algoritmos.ListaEncadeada;
 
@@ -14,6 +15,7 @@ class Program
         // EstudoListas();
         // EstudoString();
         EstudosListaEncadeada();
+        Console.WriteLine(BuscaBinaria.Buscar(new List<int> { 1, 2, 3, 4, 5 }, 3));
     }
 
     static void EstudoArrays()
